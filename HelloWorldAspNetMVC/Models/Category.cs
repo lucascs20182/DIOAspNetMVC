@@ -10,7 +10,5 @@ namespace HelloWorldAspNetMVC.Models
         [Display(Name = "Descrição")]
         [Required(ErrorMessage = "O campo descrição deve ser preenchido.")]
         public string description { get; set; }
-
-        public List<Product> Products { get; set; }
     }
 }
