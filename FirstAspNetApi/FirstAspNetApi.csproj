@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\sqa\Desktop\FirstAspNetApi\FirstAspNetApi.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\sqa\Desktop\DIOAspNetMVC\FirstAspNetApi\FirstAspNetApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\sqa\Desktop\FirstAspNetApi\FirstAspNetApi.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\sqa\Desktop\DIOAspNetMVC\FirstAspNetApi\FirstAspNetApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

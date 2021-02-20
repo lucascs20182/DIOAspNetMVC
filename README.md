@@ -14,3 +14,7 @@ Você pode construir os dois projeto a partir do comando `dotnet build `
 ### ▶ Execução
 
 Entre na pasta de um projeto e rode com o comando `dotnet run`
+
+HelloWorldAspNetMVC ficará disponível em https://localhost:5001/ 
+
+FirstAspNetApi em http://localhost:5002/index.html
