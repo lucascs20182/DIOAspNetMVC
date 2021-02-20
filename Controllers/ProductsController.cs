@@ -47,7 +47,7 @@ namespace HelloWorldAspNetMVC.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
-            ViewData["categoryId"] = new SelectList(_context.Categories, "id", "id");
+            ViewData["categoryId"] = new SelectList(_context.Categories, "id", "description");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace HelloWorldAspNetMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["categoryId"] = new SelectList(_context.Categories, "id", "id", product.categoryId);
+            ViewData["categoryId"] = new SelectList(_context.Categories, "id", "description", product.categoryId);
             return View(product);
         }
 
@@ -81,7 +81,7 @@ namespace HelloWorldAspNetMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["categoryId"] = new SelectList(_context.Categories, "id", "id", product.categoryId);
+            ViewData["categoryId"] = new SelectList(_context.Categories, "id", "description", product.categoryId);
             return View(product);
         }
 
@@ -117,7 +117,7 @@ namespace HelloWorldAspNetMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["categoryId"] = new SelectList(_context.Categories, "id", "id", product.categoryId);
+            ViewData["categoryId"] = new SelectList(_context.Categories, "id", "description", product.categoryId);
             return View(product);
         }
 
