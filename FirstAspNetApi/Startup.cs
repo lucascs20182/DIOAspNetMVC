@@ -29,10 +29,19 @@ namespace FirstAspNetApi
 
         #pragma warning disable CS1591
         public IConfiguration Configuration { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
+                {
+                    builder.WithOrigins("http://localhost:5002", "http://localhost:5003");
+                });
+            });
 
             services.AddControllers();
             services.AddDbContext<Context>();
@@ -59,6 +68,8 @@ namespace FirstAspNetApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 
